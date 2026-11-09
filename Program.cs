@@ -13,6 +13,8 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+app.UseErrorHandling();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

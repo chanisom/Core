@@ -19,7 +19,7 @@ public class StudyTasksMiddleware
         await context.Response.WriteAsync("Study Tasks is temporarily unavailable.");
         return;
     }
-
+    
     await next.Invoke(context);
     }
 }
@@ -28,4 +28,5 @@ public static class MiddlewareExtensions
 {
     public static IApplicationBuilder UseStudyTasks(this IApplicationBuilder builder)
         => builder.UseMiddleware<StudyTasksMiddleware>();
+
 }

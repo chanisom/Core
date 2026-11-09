@@ -67,4 +67,11 @@ _studyTaskService.Delete(id);
 
 return NoContent();
 }
+
+[HttpGet("boom")]
+public IActionResult Boom()
+{
+    throw new Exception("Boom! This is a test exception.");
+}
+
 }
